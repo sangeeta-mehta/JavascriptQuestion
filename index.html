@@ -1,0 +1,75 @@
+<!-- question 4 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-xl-7 col-md-12">
+                <table class="table table-dark table-striped" id="emplyeeDetail">
+                    <thead>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Department</th>
+                        </tr>
+                    </thead>
+                  </table>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Get the employees data
+var employeesData = {
+  "employees": [
+    {
+      "first_name": "Amit",
+      "last_name": "Sharma",
+      "department": "SEO"
+    },
+    {
+      "first_name": "Vineet",
+      "last_name": "Kumar",
+      "department": "Accounts"
+    },
+    {
+      "first_name": "Ajay",
+      "last_name": "Thakur",
+      "department": "QA"
+    },
+    {
+      "first_name": "Chandra",
+      "last_name": "Sharma",
+      "department": "Designer"
+    }
+  ]
+};
+
+// Create the table element
+var table = document.getElementById("emplyeeDetail");
+
+// Add table rows
+var tableBody = table.createTBody();
+for(var i=0; i<employeesData.employees.length; i++){
+  var employee = employeesData.employees[i];
+  var tableRow = tableBody.insertRow();
+
+  var firstNameCell = tableRow.insertCell();
+  firstNameCell.innerHTML = employee.first_name;
+
+  var lastNameCell = tableRow.insertCell();
+  lastNameCell.innerHTML = employee.last_name;
+
+  var departmentCell = tableRow.insertCell();
+  departmentCell.innerHTML = employee.department;
+}
+
+    </script>
+</body>
+</html>
