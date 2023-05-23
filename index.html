@@ -21,6 +21,12 @@
                         </tr>
                     </thead>
                   </table>
+
+                  <ul id="myList">
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                  </ul>
             </div>
         </div>
     </div>
@@ -70,6 +76,18 @@ for(var i=0; i<employeesData.employees.length; i++){
   departmentCell.innerHTML = employee.department;
 }
 
+
+
+var myList = document.getElementById('myList');
+
+    // Event listener attached to the parent element
+    myList.addEventListener('click', function(event) {
+      // Check if the event target is an <li> element
+      if (event.target.nodeName === 'LI') {
+        // Perform the desired action
+        console.log('Clicked on:', event.target.innerText);
+      }
+    });
     </script>
 </body>
 </html>
